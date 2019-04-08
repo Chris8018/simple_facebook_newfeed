@@ -27,9 +27,9 @@ public class MainActivity extends AppCompatActivity {
 
         // Initialize posts
         for (int i = 0; i < 100; i++) {
-            posts.add(new Post("danielmalone",
+            posts.add(new Post("danielmalone" + i,
                     "Some text here",
-                    "https://picsum.photos/600/300/?random"));
+                    "https://picsum.photos/600/300/?random&" + i));
         }
 
         RecyclerView recyclerView = findViewById(R.id.recycleView);

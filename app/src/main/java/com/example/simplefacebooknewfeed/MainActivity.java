@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         List<Post> posts = new ArrayList<>();
 
         // Initialize posts
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 50; i++) {
             posts.add(new Post("danielmalone" + i,
                     "Some text here",
                     "https://picsum.photos/600/300/?random&" + i));

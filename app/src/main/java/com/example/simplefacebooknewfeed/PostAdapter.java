@@ -2,6 +2,7 @@ package com.example.simplefacebooknewfeed;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +23,7 @@ class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
     @NonNull
     @Override
     public PostAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+        Log.d("ViewType", "Type is " + i);
         View view = LayoutInflater.from(viewGroup.getContext())
                 .inflate(R.layout.post_row, viewGroup, false);
         return new ViewHolder(view);
@@ -40,6 +42,11 @@ class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
     @Override
     public int getItemCount() {
         return posts.size();
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        return 0;
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
